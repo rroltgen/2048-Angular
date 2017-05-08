@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2048</title>
+	<link href="css/main.css" rel="stylesheet" />
+    
+    <!-- Include the core AngularJS library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body ng-app="twentyfortyeight">
+
+    <div id="content" ng-controller="GameController as ctrl" ng-keydown="keyboard($event)" tabindex="1">
+    	<div id="heading" class="row">
+    		<h1 class="title">2048</h1>
+    		<div class="scores-container">
+    			<div class="score-container">Current Score: {{ game.currentScore }}</div>
+    		</div>
+    	</div><br><hr><br>
+    	<div id="grid">
+            <!--Custom Grid Directive makes table (grid.js)-->
+    		<grid></grid>
+    	</div>
+        <br>
+        <button ng-click="upFunc()">
+        <i class="fa fa-arrow-circle-up" style="font-size:48px;color:white"></i>
+        </button>
+        <button ng-click="downFunc()">
+            <i class="fa fa-arrow-circle-down" style="font-size:48px;color:white"></i>
+        </button>
+        <button ng-click="leftFunc()">
+            <i class="fa fa-arrow-circle-left" style="font-size:48px;color:white"></i>
+        </button>
+        <button ng-click="rightFunc()">
+            <i class="fa fa-arrow-circle-right" style="font-size:48px;color:white"></i>
+        </button>
+    </div>
+    
+    <!-- Modules -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/GameController.js"></script>
+    <script src="scripts/directives/grid.js"></script>
+</body>
+</html>

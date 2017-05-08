@@ -1,0 +1,31 @@
+.title {
+	font-size: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    table-layout: fixed;
+}
+
+td {
+    font-size: 30px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+button {
+    background-color: black;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#content:focus {
+    outline: 0;
+}
